@@ -55,16 +55,50 @@ D7 = X Y Z
 ## Figure -04 8 to 3 Decoder implementation 
 
 ### Procedure
-/* write all the steps invloved */
+/* Step-1: create module encoder and decoder.
+
+Step-2: Get inputs and outputs for encoders and decoders.
+
+Step-3: perform or operation for encoder and and logic for decoders.
+
+Step-4: perform RTL LOGIC and get waveform.
+
+Step-5: End the module. */
 
 
 
 ### PROGRAM 
 /*
 Program for Endocers and Decoders  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: Anbuselvam .a
+RegisterNumber:  212222240009
 */
+
+## ENCODER
+```
+module encoder(a,b,c,d0,d1,d2,d3,d4,d5,d6,d7);
+output a,b,c;
+input d0,d1,d2,d3,d4,d5,d6,d7;
+or(a,d4,d5,d6,d7);
+or(b,d2,d3,d6,d7);
+or(c,d1,d3,d5,d7);
+endmodule
+```
+## DECODER
+```
+module EX7(d0,d1,d2,d3,d4,d5,d6,d7,a,b,c);
+input a,b,c;
+output d0,d1,d2,d3,d4,d5,d6,d7;
+assign d0 = (~a&~b&~c);
+assign d1 = (~a&~b&c);
+assign d2 = (~a&b&~c);
+assign d3 = (~a&b&c);
+assign d4 = (a&~b&~c);
+assign d5 = (a&~b&c);
+assign d6 = (a&b&~c);
+assign d7 = (a&b&c);
+endmodule
+```
 
 
 
@@ -72,6 +106,15 @@ RegisterNumber:
 
 
 ### RTL LOGIC  
+
+##ENCODER
+![de enco](https://github.com/anbuselvamA/Experiment-08-Encoders-and-decoders-/assets/119559871/c33c9133-42b1-49ce-b019-ffc3a668a0cd)
+
+
+
+## DECODER
+![DE deco](https://github.com/anbuselvamA/Experiment-08-Encoders-and-decoders-/assets/119559871/8e205194-89ed-474f-a5bc-d2ef27b654cc)
+
 
 
 
@@ -82,11 +125,26 @@ RegisterNumber:
 
 ### TIMING DIGRAMS  
 
+## ENCODER
+
+![de timr](https://github.com/anbuselvamA/Experiment-08-Encoders-and-decoders-/assets/119559871/ea926a98-6e55-4d61-a37a-44d3c9197853)
+
+## DECODER
+![de decofer](https://github.com/anbuselvamA/Experiment-08-Encoders-and-decoders-/assets/119559871/ca39f670-4b3e-4037-b053-8170f822c507)
+
+
 
 
 
 
 ### TRUTH TABLE 
+## ENCODER
+![encoder truth table](https://github.com/anbuselvamA/Experiment-08-Encoders-and-decoders-/assets/119559871/34e8e563-122e-44ad-870a-3f7f354c6a78)
+
+![DECODER](https://github.com/anbuselvamA/Experiment-08-Encoders-and-decoders-/assets/119559871/0b49abd9-f82a-4a4e-b4db-1ecc181c7750)
+
+
+
 
 
 
@@ -94,3 +152,4 @@ RegisterNumber:
 
 
 ### RESULTS 
+Thus the program to desing encoder and decoder is completed.
