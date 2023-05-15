@@ -71,7 +71,8 @@ Step-5: End the module. */
 /*
 Program for Endocers and Decoders  and verify its truth table in quartus using Verilog programming.
 
-```Developed by: Anbuselvam .a
+```
+Developed by: Anbuselvam .a
 RegisterNumber:  212222240009
 ```
 */
